@@ -1,0 +1,33 @@
+{
+  "seeds": [
+    11,
+    23,
+    37
+  ],
+  "train_maps": 18,
+  "test_maps_per_split": 24,
+  "steps_per_training_map": 80,
+  "updates_per_training_map": 20,
+  "map_settings": {
+    "train": [
+      8,
+      0.18
+    ],
+    "heldout": [
+      8,
+      0.18
+    ],
+    "shifted": [
+      11,
+      0.28
+    ]
+  },
+  "teacher_source": "scripted",
+  "curriculum": {
+    "goal": "多尝试不同观测与动作的组合，收集移动和停留的结果。",
+    "first": "novelty",
+    "second": "uncertainty"
+  },
+  "torch": "2.11.0+cu128",
+  "numpy": "2.3.5"
+}
